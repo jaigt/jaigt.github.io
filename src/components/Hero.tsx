@@ -20,13 +20,13 @@ export default function Hero() {
   const linkedin = socials.find((s) => s.label === "LinkedIn");
 
   return (
-    <section className="relative h-[100svh] overflow-hidden">
+    <section className="relative md:h-[100svh] md:overflow-hidden">
       <span className="sr-only">{name}</span>
       <motion.div
         initial={{ opacity: 0, scale: 0.97 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-        className="absolute inset-x-4 top-[14svh] bottom-[-6svh] md:inset-x-10 lg:inset-x-16"
+        className="mx-4 mt-[12svh] mb-6 md:absolute md:inset-x-10 md:top-[14svh] md:bottom-[-6svh] md:mx-0 md:my-0 lg:inset-x-16"
       >
         <TerminalFrame>
           <div className="flex h-full flex-col px-5 py-7 font-mono text-[13px] leading-relaxed md:px-12 md:py-9 md:text-sm">

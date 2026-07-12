@@ -28,6 +28,20 @@ export const metadata: Metadata = {
     title: `${portfolio.name} — ${portfolio.role}`,
     description: portfolio.bio,
     type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 2400,
+        height: 1256,
+        alt: `${portfolio.name} — portfolio`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${portfolio.name} — ${portfolio.role}`,
+    description: portfolio.bio,
+    images: ["/og.png"],
   },
 };
 

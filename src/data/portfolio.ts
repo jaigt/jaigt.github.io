@@ -65,11 +65,12 @@ export const portfolio: Portfolio = {
     statusPrefix: "⏵⏵ read-only mode",
   },
   manifesto: [
-    "I work at the intersection of AI and finance — building agents that read primary sources, cite their numbers, and verify their own work.",
+    "I build with AI — agents that use tools, interfaces that adapt to their users, systems that verify their own work.",
+    "Finance is the passion I keep coming back to: markets, primary sources, numbers that carry citations. When AI and finance intersect, that's my favorite place to build — but I'll happily chase a good idea anywhere.",
     "I spent three years at an enterprise bank building the platforms that let a large organization adopt generative AI: an enablement portal, model sandboxes, multi-provider LLM APIs, and an internal agentic framework.",
     "Now I'm pursuing an MS in AI, concentrating in Finance & Operations, and building tools in the open.",
   ],
-  bio: "I build agents that read filings, reason about portfolios, and make sense of money.",
+  bio: "I build agents, interfaces, and tools — often where AI meets finance.",
   email: "jaigupta2024@gmail.com",
   aiWorkflow: {
     title: "AI as a daily operating system",
@@ -131,15 +132,6 @@ export const portfolio: Portfolio = {
       featured: true,
     },
     {
-      title: "Pit Wall",
-      description:
-        "A real-time F1 race strategy game. A deterministic, pure-TypeScript sim engine plays out each lap against AI rivals while you call tyres, pit timing, and weather gambles on a PixiJS track map.",
-      tags: ["TypeScript", "PixiJS", "Zustand"],
-      links: { github: "https://github.com/jaigt/race" },
-      image: "/projects/pitwall.webm",
-      imageAlt: "Pit Wall race simulation with live track map and strategy calls",
-    },
-    {
       title: "schwab-mcp",
       description:
         "A Model Context Protocol server that connects a Schwab portfolio to an AI agent — read-only positions, balances, transactions, and live market data.",
@@ -147,6 +139,15 @@ export const portfolio: Portfolio = {
       links: { github: "https://github.com/jaigt/schwab-mcp" },
       image: "/projects/schwab-mcp.webm",
       imageAlt: "An AI agent calling schwab-mcp tools and receiving portfolio data",
+    },
+    {
+      title: "Pit Wall",
+      description:
+        "A real-time F1 race strategy game. A deterministic, pure-TypeScript sim engine plays out each lap against AI rivals while you call tyres, pit timing, and weather gambles on a PixiJS track map.",
+      tags: ["TypeScript", "PixiJS", "Zustand"],
+      links: { github: "https://github.com/jaigt/race" },
+      image: "/projects/pitwall.webm",
+      imageAlt: "Pit Wall race simulation with live track map and strategy calls",
     },
   ],
   socials: [

@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const items = [
-  { label: "Work", href: "/#work" },
-  { label: "Resume", href: "/resume" },
-] as const;
-
 export default function PillNav() {
   const pathname = usePathname();
   const onResume = pathname.startsWith("/resume");
+
+  const itemClass = (active: boolean) =>
+    `relative z-10 rounded-full px-5 py-1.5 text-sm transition-colors duration-300 ${
+      active ? "text-text" : "text-muted hover:text-text"
+    }`;
 
   return (
     <nav
@@ -24,20 +24,15 @@ export default function PillNav() {
           transform: onResume ? "translateX(100%)" : "translateX(0)",
         }}
       />
-      {items.map((item) => {
-        const active = item.href === "/resume" ? onResume : !onResume;
-        return (
-          <Link
-            key={item.href}
-            href={item.href}
-            className={`relative z-10 rounded-full px-5 py-1.5 text-sm transition-colors duration-300 ${
-              active ? "text-text" : "text-muted hover:text-text"
-            }`}
-          >
-            {item.label}
-          </Link>
-        );
-      })}
+      {/* plain <a>: hash-only navigation must bypass the Next router — with
+          static export + trailingSlash the router re-encodes the current hash
+          and stacks #work%23work on every click */}
+      <a href="/#work" className={itemClass(!onResume)}>
+        Work
+      </a>
+      <Link href="/resume" className={itemClass(onResume)}>
+        Resume
+      </Link>
     </nav>
   );
 }

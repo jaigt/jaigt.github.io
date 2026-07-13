@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Wide AND tall enough for the fixed 100svh hero; zoomed-in tablets stay wide but get short, so they fall back to natural flow */
+@custom-variant md-tall (@media (min-width: 48rem) and (min-height: 44rem));
+
 @theme {
   --color-bg: #0a0a0a;
   --color-frame: #121212;

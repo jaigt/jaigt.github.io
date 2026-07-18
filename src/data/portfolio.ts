@@ -103,7 +103,7 @@ export const portfolio: Portfolio = {
     },
     {
       category: "AI & Agents",
-      items: ["Claude", "MCP", "RAG"],
+      items: ["Claude", "MCP", "Skills"],
     },
     {
       category: "Frameworks & Tools",
@@ -151,8 +151,8 @@ export const portfolio: Portfolio = {
     },
   ],
   socials: [
+    { label: "X", url: "https://x.com/jaigt_", handle: "@jaigt_" },
     { label: "GitHub", url: "https://github.com/jaigt", handle: "@jaigt" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/jaigupta2002/", handle: "in/jaigupta2002" },
-    { label: "X", url: "https://x.com/jaigt_", handle: "@jaigt_" },
   ],
 };

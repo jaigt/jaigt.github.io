@@ -20,6 +20,9 @@
 # production
 /build
 
+# claude code session artifacts
+.claude/scheduled_tasks.lock
+
 # misc
 .DS_Store
 *.pem

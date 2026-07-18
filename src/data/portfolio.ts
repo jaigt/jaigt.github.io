@@ -153,5 +153,6 @@ export const portfolio: Portfolio = {
   socials: [
     { label: "GitHub", url: "https://github.com/jaigt", handle: "@jaigt" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/jaigupta2002/", handle: "in/jaigupta2002" },
+    { label: "X", url: "https://x.com/jaigt_", handle: "@jaigt_" },
   ],
 };

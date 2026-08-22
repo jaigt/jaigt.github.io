@@ -16,9 +16,9 @@ function appear(delay: number) {
 
 export default function Hero() {
   const { terminal, skills, name, socials } = portfolio;
-  const xTwt = socials.find((s) => s.label === "X");
   const github = socials.find((s) => s.label === "GitHub");
   const linkedin = socials.find((s) => s.label === "LinkedIn");
+  const xTwt = socials.find((s) => s.label === "X");
 
   return (
     <section className="relative md-tall:h-[100svh] md-tall:overflow-hidden">

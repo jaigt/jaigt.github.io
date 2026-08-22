@@ -32,7 +32,7 @@ export const resume: Resume = {
       org: "Ally Financial",
       roles: [
         {
-          title: "AI Software Engineer",
+          title: "Software Engineer, AI Enablement",
           period: "January 2025 – May 2026",
           bullets: [
             "Architected the AI Enablement Portal — a centralized hub serving internal engineering and data-science teams across lines of business with platform access, experiment tracking, and custom Agent creation via our internal Agentic Framework.",
@@ -41,7 +41,7 @@ export const resume: Resume = {
           ],
         },
         {
-          title: "AI Associate Engineer",
+          title: "Associate Engineer, AI Enablement",
           period: "January 2024 – January 2025",
           bullets: [
             "Developed AI Sandbox APIs to facilitate enterprise-wide experimentation with Generative AI in a controlled environment.",
@@ -91,8 +91,10 @@ export const resume: Resume = {
       school: "Columbia University",
       location: "New York, NY",
       degree: "Master of Science in Artificial Intelligence",
-      period: "Expected December 2027 (starting Fall 2026)",
-      details: [],
+      period: "Present - Expected December 2027",
+      details: [
+        "Coursework: AI for Operations Research & Financial Engineering, Agentic AI for OR & FE, Natural Language Processing, Deep Learning for OR & FE",
+      ],
     },
     {
       school: "New York University, Courant Institute of Mathematical Sciences",
@@ -102,11 +104,13 @@ export const resume: Resume = {
       details: [
         "Presidential Honors Scholar",
         "Cumulative GPA: 3.759",
-        "Relevant coursework: Machine Learning, Natural Language Processing, Causal Inference, Advanced Techniques in ML and Deep Learning, Responsible Data Science, Processing Big Data for Analytics Applications",
+        "Coursework: Machine Learning, Natural Language Processing, Causal Inference, Advanced Techniques in ML and Deep Learning, Responsible Data Science, Processing Big Data for Analytics Applications",
       ],
     },
   ],
-  certificates: ["Coursera IBM Data Science Professional Certificate — June 2023"],
+  certificates: [
+    "Coursera IBM Data Science Professional Certificate — June 2023",
+  ],
   skills: [
     {
       label: "Technical",
@@ -117,10 +121,13 @@ export const resume: Resume = {
         "AWS",
         "Prompt Engineering",
         "Python",
-        "React.js",
+        "Terraform",
         "Process Automation",
       ],
     },
-    { label: "Languages", items: ["English (Native)", "Hindi (Native)", "Korean (Intermediate)"] },
+    {
+      label: "Languages",
+      items: ["English (Native)", "Hindi (Native)", "Korean (Intermediate)"],
+    },
   ],
 };

@@ -57,16 +57,16 @@ export const portfolio: Portfolio = {
     version: "agent-harness v1.0.0",
     modelLine: "jai-4 · applied-ai · /users/jai/nyc",
     recentActivity: [
-      { when: "loading…", what: "MS in AI · Finance & Operations" },
-      { when: "now", what: "building tools in the open" },
+      { when: "now", what: "MS in AI · Finance & Operations" },
+      { when: "always", what: "tinkering" },
       { when: "'24–'26", what: "AI enablement at an enterprise bank" },
     ],
     inputHint: "scroll down to see the work",
     statusPrefix: "⏵⏵ read-only mode",
   },
   manifesto: [
-    "I build with AI — agents that use tools, interfaces that adapt to their users, systems that verify their own work.",
-    "Finance is the passion I keep coming back to: markets, primary sources, numbers that carry citations. When AI and finance intersect, that's my favorite place to build — but I'll happily chase a good idea anywhere.",
+    "I build with AI - agents, the tools they use, and the interfaces we use to interact with them.",
+    "I have a passion for Finance - markets, investing, research. I enjoy exploring the intersection of AI and Finance.",
     "I spent three years at an enterprise bank building the platforms that let a large organization adopt generative AI: an enablement portal, model sandboxes, multi-provider LLM APIs, and an internal agentic framework.",
     "Now I'm pursuing an MS in AI, concentrating in Finance & Operations, and building tools in the open.",
   ],
@@ -80,7 +80,7 @@ export const portfolio: Portfolio = {
       {
         name: "Morning market brief",
         description:
-          "A weekday agent reads my watchlist and thesis files, pulls live data through my own Schwab MCP server, and reports how far each name sits from its margin-of-safety entry — with the discipline to say \"nothing to do today.\"",
+          'A weekday agent reads my watchlist and thesis files, pulls live data through my own Schwab MCP server, and reports how far each name sits from its margin-of-safety entry — with the discipline to say "nothing to do today."',
       },
       {
         name: "Earnings reviews & price watches",
@@ -99,18 +99,29 @@ export const portfolio: Portfolio = {
   skills: [
     {
       category: "Languages",
-      items: ["Python", "TypeScript"],
+      items: ["Python", "Learning: Lua", "Learning: Rust"],
     },
     {
       category: "AI & Agents",
       items: ["Claude", "MCP", "Skills"],
     },
     {
-      category: "Frameworks & Tools",
-      items: ["React", "Vite"],
+      category: "Platform & Cloud",
+      items: ["AWS", "Terraform", "Apigee", "Process Automation"],
     },
   ],
   projects: [
+    {
+      title: "schwab-mcp",
+      description:
+        "A Model Context Protocol server that connects a Schwab portfolio to an AI agent — read-only positions, balances, transactions, and live market data.",
+      tags: ["Python", "MCP"],
+      links: { github: "https://github.com/jaigt/schwab-mcp" },
+      image: "/projects/schwab-mcp.webm",
+      imageAlt:
+        "An AI agent calling schwab-mcp tools and receiving portfolio data",
+      featured: true,
+    },
     {
       title: "GenUI",
       description:
@@ -118,7 +129,8 @@ export const portfolio: Portfolio = {
       tags: ["TypeScript", "React", "Claude API", "esbuild"],
       links: { github: "https://github.com/jaigt/generative-ui" },
       image: "/projects/genui.mp4",
-      imageAlt: "GenUI demo: the same app rendering different model-written interfaces per user",
+      imageAlt:
+        "GenUI demo: the same app rendering different model-written interfaces per user",
       featured: true,
     },
     {
@@ -128,17 +140,8 @@ export const portfolio: Portfolio = {
       tags: ["Python", "FastAPI", "LanceDB", "React"],
       links: { github: "https://github.com/jaigt/mosaic" },
       image: "/projects/mosaic.webm",
-      imageAlt: "Mosaic answering an equity research question with cited figures",
-      featured: true,
-    },
-    {
-      title: "schwab-mcp",
-      description:
-        "A Model Context Protocol server that connects a Schwab portfolio to an AI agent — read-only positions, balances, transactions, and live market data.",
-      tags: ["Python", "MCP"],
-      links: { github: "https://github.com/jaigt/schwab-mcp" },
-      image: "/projects/schwab-mcp.webm",
-      imageAlt: "An AI agent calling schwab-mcp tools and receiving portfolio data",
+      imageAlt:
+        "Mosaic answering an equity research question with cited figures",
     },
     {
       title: "Pit Wall",
@@ -147,12 +150,17 @@ export const portfolio: Portfolio = {
       tags: ["TypeScript", "PixiJS", "Zustand"],
       links: { github: "https://github.com/jaigt/race" },
       image: "/projects/pitwall.webm",
-      imageAlt: "Pit Wall race simulation with live track map and strategy calls",
+      imageAlt:
+        "Pit Wall race simulation with live track map and strategy calls",
     },
   ],
   socials: [
-    { label: "X", url: "https://x.com/jaigt_", handle: "@jaigt_" },
     { label: "GitHub", url: "https://github.com/jaigt", handle: "@jaigt" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/jaigupta2002/", handle: "in/jaigupta2002" },
+    {
+      label: "LinkedIn",
+      url: "https://www.linkedin.com/in/jaigupta2002/",
+      handle: "in/jaigupta2002",
+    },
+    { label: "X", url: "https://x.com/jaigt_", handle: "@jaigt_" },
   ],
 };

@@ -31,6 +31,8 @@ export default function BentoGrid() {
           />
         )}
 
+        <AIWorkflowCard className="md:col-span-3 md:row-span-2" />
+
         {featured.slice(1).map((project) => (
           <ProjectCard
             key={project.title}
@@ -46,8 +48,6 @@ export default function BentoGrid() {
             className="md:col-span-3 md:row-span-2"
           />
         ))}
-
-        <AIWorkflowCard className="md:col-span-3 md:row-span-2" />
 
         <SkillsCard className="md:col-span-6" />
 

@@ -97,12 +97,42 @@ export default function ResumePage() {
                 {edu.details.length > 0 && (
                   <ul className="mt-1.5 space-y-1">
                     {edu.details.map((detail, i) => (
-                      <li key={i} className="text-sm leading-relaxed text-muted">
+                      <li
+                        key={i}
+                        className="text-sm leading-relaxed text-muted"
+                      >
                         {detail}
                       </li>
                     ))}
                   </ul>
                 )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <SectionTitle>Projects</SectionTitle>
+          <div className="space-y-6">
+            {resume.projects.map((proj) => (
+              <div key={proj.project}>
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4">
+                  <h3 className="font-medium text-text">{proj.project}</h3>
+                  <p className="font-mono text-xs text-muted">{proj.source}</p>
+                </div>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                  {proj.details}
+                </p>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {proj.tools.map((tool) => (
+                    <span
+                      key={tool}
+                      className="rounded-full border border-line px-2.5 py-0.5 text-xs text-dim"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

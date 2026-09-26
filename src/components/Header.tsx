@@ -9,7 +9,7 @@ export default function Header() {
         <p className="text-xs text-muted">{portfolio.role}</p>
       </div>
 
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="sm:absolute sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2">
         <PillNav />
       </div>
 

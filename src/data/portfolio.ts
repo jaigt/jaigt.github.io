@@ -2,10 +2,9 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
-  links: { github?: string; live?: string };
+  links: { github?: string; live?: string; website?: string };
   image?: string;
   imageAlt?: string;
-  featured?: boolean;
 };
 
 export type SocialLink = {
@@ -58,17 +57,17 @@ export const portfolio: Portfolio = {
     modelLine: "jai-4 · applied-ai · /users/jai/nyc",
     recentActivity: [
       { when: "now", what: "MS in AI · Finance & Operations" },
-      { when: "always", what: "tinkering" },
-      { when: "'24–'26", what: "AI enablement at an enterprise bank" },
+      { when: "always", what: "tinkering..." },
+      { when: "'24–'26", what: "AI enablement at Ally Financial" },
     ],
     inputHint: "scroll down to see the work",
     statusPrefix: "⏵⏵ read-only mode",
   },
   manifesto: [
-    "I build with AI - agents, the tools they use, and the interfaces we use to interact with them.",
-    "I have a passion for Finance - markets, investing, research. I enjoy exploring the intersection of AI and Finance.",
-    "I spent three years at an enterprise bank building the platforms that let a large organization adopt generative AI: an enablement portal, model sandboxes, multi-provider LLM APIs, and an internal agentic framework.",
-    "Now I'm pursuing an MS in AI, concentrating in Finance & Operations, and building tools in the open.",
+    "I build with AI — agents, the tools they use, and the interfaces we use to interact with them.",
+    "I have a passion for Finance — markets, investing, research. I enjoy exploring the intersection of AI and Finance.",
+    "I spent two and a half years at Ally Financial building the platforms that let a large organization adopt generative AI: an enablement portal, multi-provider LLM APIs, agents and skills, and more.",
+    "Now I'm pursuing an MS in AI, concentrating in Finance & Operations, while building and learning new things.",
   ],
   bio: "I build agents, interfaces, and tools — often where AI meets finance.",
   email: "jaigupta2024@gmail.com",
@@ -99,28 +98,27 @@ export const portfolio: Portfolio = {
   skills: [
     {
       category: "Languages",
-      items: ["Python", "Learning: Lua", "Learning: Rust"],
+      items: ["Python", "TypeScript", "Learning: Lua", "Learning: Rust"],
     },
     {
       category: "AI & Agents",
-      items: ["Claude", "MCP", "Skills"],
+      items: ["Claude", "MCP", "Skills", "Safety & Guardrails"],
     },
     {
       category: "Platform & Cloud",
-      items: ["AWS", "Terraform", "Apigee", "Process Automation"],
+      items: ["AWS", "Terraform", "Apigee", "CI/CD", "Process Automation"],
     },
   ],
   projects: [
     {
       title: "schwab-mcp",
       description:
-        "A Model Context Protocol server that connects a Schwab portfolio to an AI agent — read-only positions, balances, transactions, and live market data.",
-      tags: ["Python", "MCP"],
+        "An MCP server connecting a Charles Schwab portfolio to AI agents: 12 read-only tools for positions, balances, transactions, orders, quotes, price history, and fundamentals. Implements the Schwab OAuth flow with token-health monitoring and an account selector that resolves nicknames without ever exposing full account numbers.",
+      tags: ["Python", "FastMCP"],
       links: { github: "https://github.com/jaigt/schwab-mcp" },
       image: "/projects/schwab-mcp.webm",
       imageAlt:
         "An AI agent calling schwab-mcp tools and receiving portfolio data",
-      featured: true,
     },
     {
       title: "GenUI",
@@ -131,35 +129,21 @@ export const portfolio: Portfolio = {
       image: "/projects/genui.mp4",
       imageAlt:
         "GenUI demo: the same app rendering different model-written interfaces per user",
-      featured: true,
     },
     {
-      title: "Mosaic",
+      title: "GenGuardX MCP Server",
       description:
-        "An autonomous equity-research analyst over SEC filings. Fetches filings from EDGAR on demand, answers with cited figures and generative charts, tracks insider and superinvestor activity, and self-verifies every number against its sources. Read the filings, not the headlines.",
-      tags: ["Python", "FastAPI", "LanceDB", "React"],
-      links: { github: "https://github.com/jaigt/mosaic" },
-      image: "/projects/mosaic.webm",
-      imageAlt:
-        "Mosaic answering an equity research question with cited figures",
-    },
-    {
-      title: "Pit Wall",
-      description:
-        "A real-time F1 race strategy game. A deterministic, pure-TypeScript sim engine plays out each lap against AI rivals while you call tyres, pit timing, and weather gambles on a PixiJS track map.",
-      tags: ["TypeScript", "PixiJS", "Zustand"],
-      links: { github: "https://github.com/jaigt/race" },
-      image: "/projects/pitwall.webm",
-      imageAlt:
-        "Pit Wall race simulation with live track map and strategy calls",
+        "The MCP server that lets AI agents operate within GenGuardX, Corridor Platforms' GenAI-governance platform: tools to create prompts, entire pipelines, evaluations, and monitoring dashboards, accelerating AI application development and iteration within GenGuardX. Merged into production.",
+      tags: ["Python", "MCP SDK v2", "FastAPI"],
+      links: { website: "https://genguardx.ai/" },
     },
   ],
   socials: [
     { label: "GitHub", url: "https://github.com/jaigt", handle: "@jaigt" },
     {
       label: "LinkedIn",
-      url: "https://www.linkedin.com/in/jaigupta2002/",
-      handle: "in/jaigupta2002",
+      url: "https://www.linkedin.com/in/jaigt/",
+      handle: "in/jaigt",
     },
     { label: "X", url: "https://x.com/jaigt_", handle: "@jaigt_" },
   ],

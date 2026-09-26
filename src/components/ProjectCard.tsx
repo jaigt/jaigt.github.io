@@ -9,8 +9,13 @@ export default function ProjectCard({
   project: Project;
   className?: string;
 }) {
+  // without media the card spans the full grid row, so lay it out horizontally
+  const wide = !project.image;
+
   return (
-    <BentoCard className={`flex flex-col ${className ?? ""}`}>
+    <BentoCard
+      className={`flex flex-col ${wide ? "md:flex-row md:items-end md:justify-between md:gap-12" : ""} ${className ?? ""}`}
+    >
       {project.image && (
         <div className="relative mb-5 aspect-video overflow-hidden rounded-xl border border-line">
           {project.image.endsWith(".webm") || project.image.endsWith(".mp4") ? (
@@ -35,41 +40,59 @@ export default function ProjectCard({
           )}
         </div>
       )}
-      <h3 className="text-base font-medium text-text">{project.title}</h3>
-      <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-        {project.description}
-      </p>
-      <div className="mt-4 flex flex-wrap gap-1.5">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full border border-line px-2.5 py-0.5 text-xs text-dim"
-          >
-            {tag}
-          </span>
-        ))}
+      <div className={wide ? "max-w-3xl" : "flex flex-1 flex-col"}>
+        <h3 className="text-base font-medium text-text">{project.title}</h3>
+        <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
+          {project.description}
+        </p>
       </div>
-      <div className="mt-4 flex gap-4 text-sm">
-        {project.links.github && (
-          <a
-            href={project.links.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text/80 underline-offset-4 transition hover:text-text hover:underline"
-          >
-            GitHub <span aria-hidden>↗</span>
-          </a>
-        )}
-        {project.links.live && (
-          <a
-            href={project.links.live}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text/80 underline-offset-4 transition hover:text-text hover:underline"
-          >
-            Live <span aria-hidden>↗</span>
-          </a>
-        )}
+      <div className={wide ? "md:shrink-0" : ""}>
+        <div
+          className={`mt-4 flex flex-wrap gap-1.5 ${wide ? "md:justify-end" : ""}`}
+        >
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-line px-2.5 py-0.5 text-xs text-dim"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        <div
+          className={`mt-4 flex gap-4 text-sm ${wide ? "md:justify-end" : ""}`}
+        >
+          {project.links.github && (
+            <a
+              href={project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text/80 underline-offset-4 transition hover:text-text hover:underline"
+            >
+              GitHub <span aria-hidden>↗</span>
+            </a>
+          )}
+          {project.links.live && (
+            <a
+              href={project.links.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text/80 underline-offset-4 transition hover:text-text hover:underline"
+            >
+              Live <span aria-hidden>↗</span>
+            </a>
+          )}
+          {project.links.website && (
+            <a
+              href={project.links.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text/80 underline-offset-4 transition hover:text-text hover:underline"
+            >
+              Website <span aria-hidden>↗</span>
+            </a>
+          )}
+        </div>
       </div>
     </BentoCard>
   );

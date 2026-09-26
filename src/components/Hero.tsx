@@ -21,13 +21,13 @@ export default function Hero() {
   const xTwt = socials.find((s) => s.label === "X");
 
   return (
-    <section className="relative md-tall:h-[100svh] md-tall:overflow-hidden">
+    <section className="relative md-tall:h-[100svh]">
       <span className="sr-only">{name}</span>
       <motion.div
         initial={{ opacity: 0, scale: 0.97 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-        className="mx-4 mt-[12svh] mb-6 md-tall:absolute md-tall:inset-x-10 md-tall:top-[14svh] md-tall:bottom-[-6svh] md-tall:mx-0 md-tall:my-0 lg:md-tall:inset-x-16"
+        className="mx-auto mt-[12svh] mb-6 w-[calc(100%-2rem)] max-w-7xl md-tall:absolute md-tall:inset-x-0 md-tall:top-[14svh] md-tall:bottom-[-6svh] md-tall:my-0 md-tall:w-full md-tall:px-10 lg:md-tall:px-16"
       >
         <TerminalFrame>
           <div className="flex h-full flex-col px-5 py-7 font-mono text-[13px] leading-relaxed md:px-12 md:py-9 md:text-sm">

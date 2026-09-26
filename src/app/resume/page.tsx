@@ -89,9 +89,11 @@ export default function ResumePage() {
           <div className="space-y-6">
             {resume.education.map((edu) => (
               <div key={edu.school}>
-                <div className="flex flex-wrap items-baseline justify-between gap-x-4">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4 sm:flex-nowrap">
                   <h3 className="font-medium text-text">{edu.school}</h3>
-                  <p className="font-mono text-xs text-muted">{edu.period}</p>
+                  <p className="shrink-0 whitespace-nowrap font-mono text-xs text-muted">
+                    {edu.period}
+                  </p>
                 </div>
                 <p className="text-sm text-text/80">{edu.degree}</p>
                 {edu.details.length > 0 && (
@@ -116,9 +118,11 @@ export default function ResumePage() {
           <div className="space-y-6">
             {resume.projects.map((proj) => (
               <div key={proj.project}>
-                <div className="flex flex-wrap items-baseline justify-between gap-x-4">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4 sm:flex-nowrap">
                   <h3 className="font-medium text-text">{proj.project}</h3>
-                  <p className="font-mono text-xs text-muted">{proj.source}</p>
+                  <p className="shrink-0 whitespace-nowrap font-mono text-xs text-muted">
+                    {proj.source}
+                  </p>
                 </div>
                 <p className="mt-1.5 text-sm leading-relaxed text-muted">
                   {proj.details}
